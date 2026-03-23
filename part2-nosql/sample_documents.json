@@ -1,0 +1,9 @@
+[
+  {
+    "customer_id": 1,
+    "name": "John",
+    "orders": [
+      {"order_id": 101, "amount": 500}
+    ]
+  }
+]
