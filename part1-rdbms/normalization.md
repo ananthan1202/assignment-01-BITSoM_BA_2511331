@@ -10,4 +10,12 @@ Customer "Priya Sharma" appears in multiple rows. If her city changes from "Delh
 If we delete the last order of customer "Rohan Mehta", we also lose his customer details like email and city.
 
 ## Normalisation Justification 
-The dataset contains repeated customer, product, and sales representative information in multiple rows. This leads to redundancy and inconsistencies. By normalising into seperate tables (customers, products, orders etc) we reduce duplication and ensure data integrity.Updates become easier and safer, and storage is optimized.
+The argument that keeping all data in a single table is simpler is understandable from a short-term perspective, but it creates serious long-term problems. In the given "orders_flat.csv", customer, product, and sales representative details are stored together, leading to redundancy and inconsistency.
+
+For example, the same customer (e.g., Priya Sharma from Delhi) appears in multiple rows for different orders. If her email needs to be updated, it must be changed in every row. Missing even one row results in inconsistent data, demonstrating an update anomaly. Similarly, product details such as “Laptop” or “Pen Set” are repeated across many records. If a product price changes, updating it everywhere becomes error-prone.
+
+There are also insert and delete issues. For instance, a new product cannot be added unless there is an associated order (insert anomaly). Likewise, deleting the only order of a product may remove all information about that product (delete anomaly).
+
+By normalizing the data into separate tables like Customers, Products, Orders, and Sales Representatives (3NF), each entity is stored only once. Relationships are maintained using keys, ensuring consistency and reducing redundancy.
+
+While a single table may seem simpler initially, it does not scale well and increases the risk of data errors. Normalization is not over-engineering; it is a necessary practice to ensure data integrity, maintainability, and efficient database operations.

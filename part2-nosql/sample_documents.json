@@ -1,9 +1,35 @@
 [
   {
-    "customer_id": 1,
-    "name": "John",
-    "orders": [
-      {"order_id": 101, "amount": 500}
-    ]
+    "name": "iPhone 15",
+    "category": "Electronics",
+    "price": 75000,
+    "brand": "Apple",
+    "warranty_years": 1,
+    "specs": {
+      "storage": "128GB",
+      "ram": "6GB",
+      "battery": "3349mAh"
+    }
+  },
+  {
+    "name": "Men's Denim Jacket",
+    "category": "Clothing",
+    "price": 2500,
+    "brand": "Levis",
+    "size_options": ["S", "M", "L", "XL"],
+    "material": "Denim",
+    "in_stock": true
+  },
+  {
+    "name": "Amul Milk",
+    "category": "Groceries",
+    "price": 60,
+    "brand": "Amul",
+    "expiry_date": "2024-12-01",
+    "nutrition": {
+      "calories": 150,
+      "protein": "8g",
+      "fat": "8g"
+    }
   }
 ]
